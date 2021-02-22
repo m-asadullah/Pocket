@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout_edit_botany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F7F7F7"
+            app:popupTheme="@style/AppTheme.AppBarOverlay.Light" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp">
+
+                <ImageButton
+                    android:id="@+id/image_button_back"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    app:srcCompat="@drawable/ic_round_arrow_back_ios_24"
+                    android:paddingEnd="30dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back_button"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageView
+                    android:id="@+id/image_view_logo"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_launcher_foreground"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/account"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_toEndOf="@id/image_view_logo"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/google_sans_700"
+                    android:foregroundGravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:layout_marginStart="1.5dp"
+                    android:layout_toEndOf="@id/image_view_logo"
+                    android:fontFamily="@font/google_sans_400"
+                    android:foregroundGravity="center_horizontal"
+                    tools:ignore="SmallSp"
+                    android:layout_marginTop="30dp"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_below="@id/appbar_layout_edit_botany">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_button_outline_b"
+            android:backgroundTint="@color/colorGreyLight"
+            tools:targetApi="lollipop">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subject"
+                android:textSize="14sp"
+                android:textColor="@color/colorGreyDark"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_light"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="Type :"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/roboto_light"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="jpg"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_light"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="MIME Type :"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/roboto_light"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="image/jpeg"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_light"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="Size :"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/roboto_light"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="102 KB"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_light"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="Resolution :"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/roboto_light"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="720x640"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_light"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="Folder :"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/roboto_light"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="Downloads"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_light"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_gradient_ab"
+                android:layout_marginStart="16dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_twotone_person_add_24"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/file_frame" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_button_outline_b"
+            android:backgroundTint="@color/colorGreyLight"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:id="@+id/image_view_file"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/ic_twotone_file_24"
+                android:contentDescription="@string/bell" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filename_ext"
+                android:textSize="14sp"
+                android:textColor="@color/colorGreyDark"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/image_view_file"
+                android:fontFamily="@font/roboto_light"/>
+
+        </RelativeLayout>
+
+        <Spinner
+            android:id="@+id/spinner_subjects"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/google_sans_400"
+                android:inputType="textMultiLine"
+                android:autofillHints=""
+                android:importantForAutofill="no"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/google_sans_400"
+                android:inputType="textMultiLine"
+                android:autofillHints=""/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_buttons_dialog"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/button_reset"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="wrap_content"
+                android:text="@string/reset"
+                android:textAllCaps="false"
+                android:fontFamily="@font/google_sans_700"
+                android:textColor="@color/colorPrimary"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/button_upload"
+                android:text="@string/upload"
+                android:textAllCaps="false"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:fontFamily="@font/google_sans_700"
+                android:textColor="@color/colorPrimary"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/text_view_msc_math_app"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_700"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:text="@string/c_o_d_i_x_o_s"
+            android:textSize="8dp"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_msc_math_app"
+            android:fontFamily="@font/montserrat_light"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            tools:ignore="SpUsage" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

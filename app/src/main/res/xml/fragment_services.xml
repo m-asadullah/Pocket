@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:key="app_designing_developing"
+        app:title="App Designing &amp; Developing"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_android_24"
+        app:summary="The palm is in touch with technology."/>
+
+    <Preference
+        app:key="ui_ux_designing"
+        app:title="UI/UX Designing"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_touch_app_24"
+        app:summary="For smooth flow, user interface must be designed in manner accordingly user experience."/>
+
+    <Preference
+        app:key="graphics_designing"
+        app:title="Graphics Designing"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_eco_24"
+        app:summary="The process of visual communication and problem-solving through the use of typography, photography, iconography and illustration."/>
+
+    <Preference
+        app:key="web_designing"
+        app:title="Web Designing"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_account_tree_24"
+        app:summary="Visit for services reach virtually from all over the Globe."/>
+
+    <Preference
+        app:key="icons_badges"
+        app:title="Icons &amp; Badges"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_category_24"
+        app:summary="Symbolic way to express uniqueness."/>
+
+    <Preference
+        app:key="illustration"
+        app:title="Illustration"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_local_florist_24"
+        app:summary="Art with in technology."/>
+
+    <Preference
+        app:key="office_templates"
+        app:title="Office Templates"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_receipt_24"
+        app:summary="A template is a special type of document that's designed to be a model for new documents."/>
+
+    <Preference
+        app:key="windows_solutions"
+        app:title="Windows Solutions"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_tv_24"
+        app:summary="Resolve issue or report a bug with quick tricks."/>
+
+</PreferenceScreen>

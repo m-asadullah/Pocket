@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:orderInCategory="100"
+        android:title="@string/share"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        app:showAsAction="ifRoom|never" >
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_video_screen_on_switch"
+                android:title="@string/screen_on"
+                app:actionLayout="@layout/switch_item"
+                android:icon="@drawable/ic_twotone_dock_24"
+                android:checked="false"
+                android:checkable="true"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/menu_video_share"
+                android:orderInCategory="100"
+                android:title="@string/share"
+                android:icon="@drawable/ic_twotone_share_24"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menu_video_open"
+                android:orderInCategory="100"
+                android:title="@string/open_video"
+                android:icon="@drawable/ic_baseline_open_in_new_24"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menu_video_details"
+                android:orderInCategory="100"
+                android:title="@string/details"
+                android:icon="@drawable/ic_twotone_info_24"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menu_video_error"
+                android:orderInCategory="100"
+                android:title="@string/error_pdf"
+                android:icon="@drawable/ic_twotone_report_problem_24"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/menu_video_report"
+                android:orderInCategory="100"
+                android:title="@string/report"
+                android:icon="@drawable/ic_twotone_report_24"
+                app:showAsAction="never" />
+
+        </menu>
+
+    </item>
+
+</menu>
+

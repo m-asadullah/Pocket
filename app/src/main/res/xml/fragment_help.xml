@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:key="help_access"
+        app:title="How access to data of app?"
+        app:icon="@drawable/ic_twotone_account_circle_24"
+        app:summary="Access to complete app by sign in or log in"/>
+
+    <Preference
+        app:key="help_join"
+        app:title="How to join app?"
+        app:icon="@drawable/ic_twotone_person_add_24"
+        app:summary="Join by following these steps: \ni-Click Settings\nii-Click Account \nThen Join Dialog PopUp appear\niii-Click Join\niv-Fill the requirements"/>
+
+    <Preference
+        app:key="help_signin"
+        app:title="How to sign in by email?"
+        app:icon="@drawable/ic_twotone_email_24"
+        app:summary="Signing in by Clicking the sign-in and put registered email &amp; password."/>
+
+    <Preference
+        app:key="help_requirements"
+        app:title="What are the requirements for account?"
+        app:icon="@drawable/ic_twotone_contact_mail_24"
+        app:summary="Requirements for account:\nName &amp; Email"/>
+
+    <Preference
+        app:key="help_verify"
+        app:title="How to verify account?"
+        app:icon="@drawable/ic_twotone_verified_user_24"
+        app:summary="When user fill the requirements and click on sign up then email from server send to user email.\nCheck verfication email in inbox.\nClick on the link in email.\nWhen user click the link in verification email the link will be open in browser.\nAfter verification come back to the app.\nSign in the app put your registered email &amp; password to complete these steps."/>
+
+
+    <Preference
+        app:key="help_reset_password"
+        app:title="How to reset password?"
+        app:icon="@drawable/ic_twotone_vpn_key_24"
+        app:summary="When user sign up or sign in and forgot password. Don't worry about it just click on Sign-in &amp;Click on Forgot Password then enter the registered email. Then check your inbox of email (i.e. gmail, yahoo ...). The reset password email send to user inbox from server. Then click the link to reset password. Come back to the Math app Sign-in with email &amp; password."/>
+
+</PreferenceScreen>

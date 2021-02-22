@@ -1,3 +1,167 @@
-<resources>
-    <string name="app_name">Pocket</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Botany</string>
+    <string name="version">Version</string>
+    <string name="real_analysis">Real Analysis</string>
+    <string name="info">Info</string>
+
+    <string name="math">Math</string>
+
+    <string name="download">Download</string>
+
+    <string name="ob_header1">Botany</string>
+    <string name="ob_header2">Save</string>
+    <string name="ob_header3">Join \nto \nAccess Content</string>
+
+    <string name="ob_get_started">Get Started</string>
+
+    <string name="rate_this_according_to_your_view">Rate this according to your view</string>
+
+    <string name="ob_desc1">Study of the physiology, structure, genetics, ecology, distribution, classification, and economic importance of plants.</string>
+    <string name="ob_desc2">Lectures delivered or mentioned by professors can be saved here without any hesitation.</string>
+    <string name="ob_desc3">Access any time to all your saved stuff by joining or signing-in the app in just a seconds.</string>
+    <string name="_00_00">00:00</string>
+    <string name="sir_professor_math">Sir Professor Math</string>
+    <string name="_00mb">00MB</string>
+    <string name="new_image">New</string>
+    <string name="description">Description</string>
+    <string name="_00_">00</string>
+    <string name="closedialog">CloseDialog</string>
+    <string name="bell">Bell</string>
+
+    <string name="usernameid">\@usernameid</string>
+    <string name="user_name">User Name</string>
+    <string name="filename_ext">Filename.ext</string>
+    <string name="cubixos_logo">Cubixos Logo</string>
+    <string name="ui_ux_designing_app_developing">UI/UX Designing, App Developing</string>
+    <string name="http_www_cubixos_com">http://www.cubixos.com</string>
+    <string name="share">Share</string>
+
+    <!-- Settings Activity Title -->
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+    <string name="attachment_summary_on">Automatically download files
+    </string>
+    <string name="attachment_summary_off">Only download files when manually requested</string>
+    <string name="website">Website</string>
+    <string name="mobile">Mobile</string>
+    <string name="your_device">Your Device</string>
+    <string name="not_supported">Not Supported</string>
+    <string name="this_app_is_not_run_on_your_mobile_n_required_latest_version_nor_n_at_least_android_5_lollipop">This App is not run on your mobile\n Required latest version \nor\n at least Android 5 Lollipop</string>
+    <string name="for_more_information">For more information</string>
+    <string name="details">Details</string>
+    <string name="heading_body">Heading Body</string>
+    <string name="heading_lower">Heading Lower</string>
+    <string name="print">Print</string>
+    <string name="report">Report</string>
+    <string name="refresh">Refresh</string>
+    <string name="open_in_other">Open in other</string>
+    <string name="screen_on">Screen ON</string>
+
+    <!-- Extra. -->
+
+    <string name="sign_in">Sign In</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+
+    <string name="logout">Logout</string>
+    <string name="verify">Verify</string>
+
+    <!-- PDF -->
+    <string name="email">Email</string>
+
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or">or</string>
+    <string name="name">Name</string>
+    <string name="email_verification">Email Verification</string>
+    <string name="required">(Required)</string>
+    <string name="forget_password">Forgot Password</string>
+    <string name="if_your_account_exist_on_this_email_then_password_reset_link_send_to_your_email_address">If your account exist on this email then password reset link send to your email address.</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="check_your_email_inbox_reset_link_send_your_email_to_gain_access_to_the_app_click_the_link_in_the_email_to_reset_password_then_sign_in_with_registered_email_amp_correct_password"><![CDATA[Check your email inbox. Reset Link send your email to gain access to the app. Click the link in the email to reset password. Then Sign In with registered email & correct password.]]></string>
+    <string name="reset_password">Reset Password</string>
+    <string name="back_button">Back Button</string>
+    <string name="join_to_gain_complete_access_to_app_other_then_that_user_will_not_be_able_to_view_data_without_joining">Join / Sign-in to gain complete access to app other then that user will not be able to view data without joining.</string>
+    <string name="join">Join</string>
+    <string name="download_files_automatically">Download files automatically</string>
+    <string name="check">Check</string>
+    <string name="gmail_inbox">GMail Inbox</string>
+    <string name="copylink">Copy</string>
+    <string name="update">Update</string>
+    <string name="new_version_available">New Version Available</string>
+    <string name="title_activity_account">Account</string>
+    <string name="available_status_is_here">Available Status is here</string>
+    <string name="account">Account</string>
+    <string name="status">Status</string>
+    <string name="profile">Profile</string>
+    <string name="username">Username</string>
+    <string name="delete">Delete</string>
+    <string name="verification">Verification</string>
+    <string name="new_app_size">New App Size</string>
+    <string name="security">Security</string>
+    <string name="are_you_sure_you_want_logout">Are you sure, You want Logout?</string>
+    <string name="delete_account_alert">Are you sure, You want to delete permanently account? \nUser should be Logged in to gain complete access to app. Other than that user will loss access to app. \n The account will be reviewed by support team before deletion. The account will deleted within 14 professional working days.</string>
+    <string name="success_dialog">Success Dialog</string>
+    <string name="reset_dialog_alert">Reset App\n Reset complete app but your downloaded data files remain save.</string>
+    <string name="help">Help</string>
+    <string name="app_math_info">The app is not publish on Google Play Store, so it will be downloaded from external website link provided in this app. If new version available , then it will be notify by this app. Every new version of App will be download from this link \nhttps://bit.ly/botany--app</string>
+    <string name="set">Set</string>
+    <string name="connect_here_in_just_a_click">Connect here in just a click</string>
+    <string name="boarding">Boarding</string>
+    <string name="error_pdf">Error</string>
+    <string name="error_pdf_file">Error in viewing file?\nYou want to download it again to fix this error. Its size is only</string>
+    <string name="email_verification_description"><![CDATA[Check your email inbox.\nVerify email address to gain access to the app. Click the link in the email to verify. Then Sign In with registered email & correct password.]]></string>
+    <string name="install_new_version">New Version is downloaded.\nInstall it get latest features on the go.\nStay up-to-date.</string>
+    <string name="video">Video</string>
+    <string name="title_of_video">Title of video</string>
+    <string name="save_as_pdf">Save as PDF</string>
+    <string name="install">Install</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="open_video">Open Video</string>
+
+    <string name="math_app_will_send_a_one_time_sms_message_to_verify_your_phone_number">Math App will send a one time SMS message to verify your phone number.</string>
+    <string name="again">Again</string>
+    <string name="sms_sent_to_your_number_check_it_and_enter_code_here">SMS sent to your number. Check it and enter code here.</string>
+    <string name="send_code">Send Code</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="please_select_your_country_so_country_code_added_to_phone_automatically">Please select your country so country code added to phone automatically.</string>
+    <string name="enter_your_active_phone_number_without_zero_i_e_3001234567">Enter your active phone number without zero. i.e 3001234567</string>
+    <string name="phone_number_for_verification_details">Phone number is availble but not visible to you until verify your account. In order to gain access to whole features of app under the policy, user should be verified to view number.</string>
+    <string name="cubixos_inc">Cubixos, Inc.</string>
+    <string name="subject">Subject</string>
+    <string name="upload">Upload</string>
+
+    <string name="c_o_d_i_x_o_s">C o d i x o s</string>
+    <string name="pdf">.pdf</string>
+    <string name="subjecta">SubjectA</string>
+    <string name="subjectb">SubjectB</string>
+    <string name="subjectc">SubjectC</string>
+    <string name="subjectd">SubjectD</string>
+    <string name="subjecte">SubjectE</string>
+    <string name="subjectf">SubjectF</string>
+    <string name="c_u_b_i_x_o_s">C u b i x o s</string>
+    <string name="hhmmssa">HHMMSSA</string>
+    <string name="ddmmyyyy">DDMMYYYY</string>
+    <string name="extra_text_with_three_lines">askfjakl\nasklfjaklfja\nakfalsfjlakfj\nakfjakfjajf</string>
+    <string name="access">Access</string>
+    <string name="edit">Edit</string>
+    <string name="file_frame">File Frame</string>
+    <string name="title">Title</string>
+    <string name="resolution">Resolution</string>
+    <string name="pages">Pages</string>
+    <string name="widthxheight">WidthxHeight</string>
+    <string name="_0_kb">0 KB</string>
+    <string name="unknown">Unknown</string>
+    <string name="file_type_icon">File Type Icon</string>
+    <string name="duration">Duration</string>
+
 </resources>

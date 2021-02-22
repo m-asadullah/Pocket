@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:orderInCategory="100"
+        android:title="@string/share"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        app:showAsAction="ifRoom|never" >
+
+        <menu>
+            <item
+                android:id="@+id/menu_web_copy"
+                android:orderInCategory="100"
+                android:title="@string/copylink"
+                android:icon="@drawable/ic_twotone_link_24"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/menu_web_share"
+                android:orderInCategory="100"
+                android:title="@string/share"
+                android:icon="@drawable/ic_twotone_share_24"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/menu_web_refresh"
+                android:orderInCategory="100"
+                android:title="@string/refresh"
+                android:icon="@drawable/ic_baseline_refresh_24"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/menu_web_open_with"
+                android:orderInCategory="100"
+                android:title="@string/open_in_other"
+                android:icon="@drawable/ic_baseline_open_in_new_24"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/menu_web_save_as_pdf"
+                android:orderInCategory="100"
+                android:title="@string/save_as_pdf"
+                android:icon="@drawable/ic_twotone_picture_as_pdf_24"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/menu_web_print"
+                android:orderInCategory="100"
+                android:title="@string/print"
+                android:icon="@drawable/ic_twotone_print_24"
+                app:showAsAction="ifRoom" />
+        </menu>
+
+    </item>
+
+</menu>

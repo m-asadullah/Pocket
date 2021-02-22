@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="my_files" path="/" />
+    <external-path name="my_files_external" path="." />
+
+    <external-path name="external" path="." />
+    <external-files-path name="external_files" path="." />
+    <files-path name="files" path="." />
+
+    <external-path name="my_apps" path="/" />
+    <external-path name="my_books" path="/" />
+    <external-path name="my_course" path="/" />
+    <external-path name="my_courseiub" path="/" />
+    <external-path name="my_papers" path="/" />
+    <external-path name="my_images" path="/" />
+    <external-path name="my_notifications" path="/" />
+    <external-path name="my_documents" path="/" />
+    <external-path name="my_videos" path="/" />
+</paths>

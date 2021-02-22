@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout_file_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F7F7F7"
+            app:popupTheme="@style/AppTheme.AppBarOverlay.Light" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp">
+
+                <ImageButton
+                    android:id="@+id/image_button_back"
+                    android:layout_width="32dp"
+                    android:layout_height="28dp"
+                    app:srcCompat="@drawable/ic_round_arrow_back_ios_24"
+                    android:paddingEnd="12dp"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back_button"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageView
+                    android:id="@+id/image_view_logo"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_launcher_foreground"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/account"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/image_button_back"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_toEndOf="@id/image_view_logo"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/google_sans_700"
+                    android:foregroundGravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:layout_marginStart="1.5dp"
+                    android:layout_toEndOf="@id/image_view_logo"
+                    android:fontFamily="@font/google_sans_400"
+                    android:foregroundGravity="center_horizontal"
+                    tools:ignore="SmallSp"
+                    android:layout_marginTop="30dp"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="ifContentScrolls"
+        android:screenReaderFocusable="true"
+        android:scrollIndicators="end"
+        android:scrollbars="vertical"
+        android:nestedScrollingEnabled="true"
+        android:defaultFocusHighlightEnabled="true"
+        tools:targetApi="p"
+        tools:ignore="UselessParent"
+        android:layout_below="@id/appbar_layout_file_upload">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_button_outline_b"
+                    android:backgroundTint="@color/colorGreyLight"
+                    tools:targetApi="lollipop">
+
+                    <TextView
+                        android:id="@+id/text_view_subject_upload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/subject"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_light"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:baselineAligned="false">
+
+                    <ScrollView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="true"
+                        android:touchscreenBlocksFocus="true"
+                        tools:ignore="NestedScrolling">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="2dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="Type :"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                                <TextView
+                                    android:id="@+id/text_view_extension_file"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="jpg"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="MIME Type :"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                                <TextView
+                                    android:id="@+id/text_view_mime_type_file"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="image/jpeg"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="Size :"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                                <TextView
+                                    android:id="@+id/text_view_size_file_upload"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/_0_kb"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    android:id="@+id/text_view_pages_resolution_title"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="Resolution :"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                                <TextView
+                                    android:id="@+id/text_view_pages_resolution_file_upload"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/widthxheight"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="Folder :"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="normal"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                                <TextView
+                                    android:id="@+id/text_view_folder_file_upload"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/unknown"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGreyDark"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/roboto_light"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_gradient_outlined_ab"
+                        android:layout_marginStart="16dp">
+
+                        <ImageButton
+                            android:id="@+id/image_button_attach_file_upload"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_twotone_person_add_24"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/file_frame" />
+
+                        <com.cubixos.botany.library.RoundedImageView
+                            android:id="@+id/image_view_thumbnail_file_upload"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_launcher_playstore_512"
+                            android:contentDescription="@string/file_frame"
+                            app:riv_corner_radius="4dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:riv_border_color="@color/colorGreyLight"
+                            app:riv_mutate_background="true"
+                            app:riv_border_width="1dp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_gradient_c"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="1dp"
+                            android:layout_margin="4dp"
+                            android:gravity="end"
+                            tools:targetApi="lollipop">
+
+                            <ImageView
+                                android:id="@+id/image_view_file_type_icon_thumbnail"
+                                android:paddingStart="2dp"
+                                android:paddingEnd="2dp"
+                                android:paddingBottom="1dp"
+                                android:layout_width="18dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_google_pdf"
+                                tools:ignore="SmallSp"
+                                android:contentDescription="@string/file_type_icon" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_button_outline_b"
+                    android:backgroundTint="@color/colorGreyLight"
+                    tools:targetApi="lollipop">
+
+                    <ImageView
+                        android:id="@+id/image_view_file_upload"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="12dp"
+                        android:scaleType="fitCenter"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        app:srcCompat="@drawable/ic_twotone_file_24"
+                        android:contentDescription="@string/bell" />
+
+                    <TextView
+                        android:id="@+id/text_view_filenameext_file_upload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filename_ext"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/image_view_file_upload"
+                        android:fontFamily="@font/roboto_light"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/ic_button_outline_b"
+                    android:backgroundTint="@color/colorGreyLight"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    tools:targetApi="lollipop">
+
+                    <Spinner
+                        android:id="@+id/spinner_subjects"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    app:counterEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:id="@+id/edit_text_title_upload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/title"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/google_sans_400"
+                        android:inputType="textMultiLine"
+                        android:autofillHints=""
+                        android:importantForAutofill="no"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    app:counterEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:id="@+id/edit_text_description_upload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/description"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/google_sans_400"
+                        android:inputType="textMultiLine"
+                        android:autofillHints=""/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_buttons_dialog"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="16dp"
+                    tools:ignore="UselessParent">
+
+                    <Button
+                        android:id="@+id/button_reset"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reset"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/google_sans_700"
+                        android:textColor="@color/colorPrimary"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_marginEnd="16dp" />
+
+                    <Button
+                        android:id="@+id/button_upload"
+                        android:text="@string/upload"
+                        android:textAllCaps="false"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:fontFamily="@font/google_sans_700"
+                        android:textColor="@color/colorPrimary"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/text_view_msc_math_app"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_700"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:text="@string/c_o_d_i_x_o_s"
+            android:textSize="8dp"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_msc_math_app"
+            android:fontFamily="@font/montserrat_light"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            tools:ignore="SpUsage" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

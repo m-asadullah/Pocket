@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:key="twitter"
+        app:title="Twitter"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://twitter.com/cubixos"
+        app:icon="@drawable/gray_twitter_48" />
+
+    <Preference
+        app:key="dribbble"
+        app:title="Dribbble"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://twitter.com/cubixos"
+        app:icon="@drawable/gray_dribbble_48" />
+
+    <Preference
+        app:key="instagram"
+        app:title="Instagram"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://instagram.com/cubixos"
+        app:icon="@drawable/gray_instagram_48" />
+
+    <Preference
+        app:key="pinterest"
+        app:title="Pinterest"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://pinterest.com/cubixos"
+        app:icon="@drawable/gray_pinterest_48" />
+
+    <Preference
+        app:key="linkedin"
+        app:title="LinkedIn"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://linkedin.com/company/cubixos"
+        app:icon="@drawable/gray_linkedin_48" />
+
+    <Preference
+        app:key="tumblr"
+        app:title="Trumblr"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://tumblr.com/cubixos"
+        app:icon="@drawable/gray_tumblr_48" />
+
+    <Preference
+        app:key="snapchat"
+        app:title="Snapchat"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://snapchat.com/add/cubixos"
+        app:icon="@drawable/gray_snapchat_48" />
+
+    <Preference
+        app:key="flickr"
+        app:title="Flickr"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://flickr.com/cubixos"
+        app:icon="@drawable/gray_flickr_48" />
+
+    <Preference
+        app:key="vimeo"
+        app:title="Vimeo"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://vimeo.com/cubixos"
+        app:icon="@drawable/gray_vimeo_48" />
+
+    <Preference
+        app:key="medium"
+        app:title="Medium"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://medium.com/@cubixos"
+        app:icon="@drawable/gray_twitter_48" />
+
+    <Preference
+        app:key="reddit"
+        app:title="Reddit"
+        app:useSimpleSummaryProvider="true"
+        app:summary="https://reddit.com/u/cubixos"
+        app:icon="@drawable/gray_reddit_48" />
+
+</PreferenceScreen>

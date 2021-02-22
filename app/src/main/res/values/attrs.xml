@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DocumentView">
+
+        <attr name="documentView_insetPadding" format="dimension"/>
+        <attr name="documentView_insetPaddingLeft" format="dimension"/>
+        <attr name="documentView_insetPaddingRight" format="dimension"/>
+        <attr name="documentView_insetPaddingTop" format="dimension"/>
+        <attr name="documentView_insetPaddingBottom" format="dimension"/>
+
+        <attr name="documentView_offsetX" format="dimension"/>
+        <attr name="documentView_offsetY" format="dimension"/>
+        <attr name="documentView_wordSpacingMultiplier" format="float"/>
+        <attr name="documentView_lineHeightMultiplier" format="float"/>
+        <attr name="documentView_reverse" format="boolean"/>
+        <attr name="documentView_maxLines" format="integer"/>
+        <attr name="documentView_hyphen" format="string"/>
+        <attr name="documentView_textAlignment" format="enum">
+            <!--
+            Corresponds to
+            @link com.bluejamesbond.text.style.TextAlignment}
+            -->
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="justified" value="2"/>
+            <enum name="center" value="3"/>
+
+        </attr>
+        <attr name="documentView_textSize" format="dimension"/>
+        <attr name="documentView_textColor" format="color"/>
+        <attr name="documentView_antialias" format="boolean"/>
+        <attr name="documentView_text" format="string"/>
+        <attr name="documentView_textSubPixel" format="boolean"/>
+        <attr name="documentView_textTypefacePath" format="string"/>
+        <attr name="documentView_textStyle" format="integer">
+            <flag name="plain" value="0"/>
+            <flag name="bold" value="1"/>
+            <flag name="underline" value="2"/>
+            <flag name="strikeThru" value="4"/>
+        </attr>
+        <attr name="documentView_textFormat" format="enum">
+            <!--
+                Plain old text. Corresponds to
+                {@link com.bluejamesbond.text.DocumentView#PLAIN_TEXT}
+            -->
+            <enum name="plain" value="0"/>
+            <!--
+                Spannable text. Corresponds to
+                {@link com.bluejamesbond.text.DocumentView#FORMATTED_TEXT}.
+            -->
+            <enum name="formatted" value="1"/>
+        </attr>
+        <attr name="documentView_cacheConfig" format="enum">
+            <enum name="no_cache" value="0"/>
+            <enum name="auto_quality" value="1"/>
+            <enum name="low_quality" value="2"/>
+            <enum name="high_quality" value="3"/>
+            <enum name="grayscale" value="4"/>
+        </attr>
+
+        <attr name="documentView_progressBar" format="reference"/>
+        <attr name="documentView_fadeInAnimationStepDelay" format="integer"/>
+        <attr name="documentView_fadeInDuration" format="integer"/>
+        <attr name="documentView_disallowInterceptTouch" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <!-- CornerRoundImageView-->
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_corner_radius" format="dimension" />
+        <attr name="riv_corner_radius_top_left" format="dimension" />
+        <attr name="riv_corner_radius_top_right" format="dimension" />
+        <attr name="riv_corner_radius_bottom_left" format="dimension" />
+        <attr name="riv_corner_radius_bottom_right" format="dimension" />
+        <attr name="riv_border_width" format="dimension" />
+        <attr name="riv_border_color" format="color" />
+        <attr name="riv_mutate_background" format="boolean" />
+        <attr name="riv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="2">
+
+            <ImageButton
+                android:id="@+id/image_button_notifier_dialog"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/ic_twotone_account_circle_24"
+                android:contentDescription="@string/bell" />
+
+            <ImageButton
+                android:id="@+id/image_button_close_dialog"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:tint="@color/colorGreyDark"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/ic_close"
+                android:contentDescription="@string/closedialog" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_picture_activity_account"
+                android:layout_width="110dp"
+                android:layout_height="110dp">
+
+                <com.cubixos.botany.library.CircleImageView
+                    android:id="@+id/image_view_dialog_profile"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:src="@drawable/empty_profile_pic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/image_view_verified_badge"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_check_mark_circle_dual"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@string/verify" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_view_username_dialog_profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/google_sans_700"
+                android:text="@string/name"/>
+
+            <TextView
+                android:id="@+id/text_view_usernameid_dialog_profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/google_sans_400"
+                android:text="@string/usernameid"/>
+
+            <TextView
+                android:id="@+id/text_view_email_dialog_profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/google_sans_400"
+                android:text="@string/email"/>
+
+            <TextView
+                android:id="@+id/text_view_phone_dialog_profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/google_sans_400"
+                android:text="@string/phone_number"/>
+
+            <TextView
+                android:id="@+id/text_view_status_dialog_profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:gravity="center"
+                android:fontFamily="@font/google_sans_400"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"/>
+
+            <ImageView
+                android:id="@+id/image_view_security"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                app:srcCompat="@drawable/ic_twotone_security_24"
+                android:contentDescription="@string/security" />
+
+            <View android:layout_width="0dp"
+                android:layout_height="15dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

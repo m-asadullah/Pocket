@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_account"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F7F7F7"
+            app:popupTheme="@style/AppTheme.AppBarOverlay.Light"
+            app:title="@string/title_activity_account">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar_layout_account">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_profile_activity_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_picture_activity_account"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="32dp"
+                android:layout_alignParentStart="true">
+
+                <com.cubixos.botany.library.CircleImageView
+                    android:id="@+id/image_view_picture_activity_account"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:src="@drawable/empty_profile_pic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/image_view_verified_badge"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_check_mark_circle_dual"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@string/verify" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_view_username_activity_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_name"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/SecondaryDark"
+                android:textSize="24sp"
+                android:fontFamily="@font/google_sans_500"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_toEndOf="@id/relative_layout_picture_activity_account"/>
+
+            <TextView
+                android:id="@+id/text_view_username_id_activity_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/usernameid"
+                android:fontFamily="@font/google_sans_400"
+                android:textColor="@color/colorGreyDark"
+                android:gravity="center"
+                android:layout_below="@id/text_view_username_activity_account"
+                android:layout_toEndOf="@id/relative_layout_picture_activity_account" />
+
+            <TextView
+                android:id="@+id/text_view_status_activity_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/available_status_is_here"
+                android:textColor="@color/SecondaryDark"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/text_view_username_id_activity_account"
+                android:layout_toEndOf="@id/relative_layout_picture_activity_account"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relative_layout_profile_activity_account">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account"
+                    android:paddingStart="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/Accent"
+                    tools:ignore="RtlSymmetry"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/text_view_name_account"
+                    android:text="@string/name"
+                    android:textSize="16sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:gravity="center_vertical"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_twotone_account_circle_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_view_username_account"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="@string/username"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_twotone_record_voice_over_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_view_status_account"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="@string/status"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_baseline_insert_emoticon_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/colorGreyDark"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_view_email_account"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="@string/email"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_twotone_email_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_view_phone_account"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorGreyDark"
+                        android:gravity="center_vertical"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="56dp"
+                        android:text="@string/phone_number"
+                        android:drawablePadding="32dp"
+                        android:lineSpacingExtra="10dp"
+                        android:fontFamily="@font/google_sans_400"
+                        tools:ignore="UseCompatTextViewDrawableXml"
+                        android:drawableStart="@drawable/ic_twotone_perm_phone_msg_24"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative_layout_phone_verify"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/colorGrey"
+                        android:background="@drawable/ic_button_outline_b"
+                        tools:targetApi="lollipop"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/text_view_phone_number_not_visible"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorGreyDark"
+                            android:gravity="center_vertical"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="56dp"
+                            android:text="@string/phone_number_for_verification_details"
+                            android:drawablePadding="32dp"
+                            android:fontFamily="@font/google_sans_400"
+                            tools:ignore="UseCompatTextViewDrawableXml"
+                            android:drawableStart="@drawable/ic_twotone_phone_locked_24"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="@color/colorGreyDark"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_view_verification_account"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="@string/verification"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_twotone_verified_user_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="@color/colorGreyLight"
+                    tools:targetApi="lollipop"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="30dp"/>
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_view_profile_account"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="@string/profile"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_baseline_person_pin_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="@color/colorGreyLight"
+                    tools:targetApi="lollipop"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="30dp"/>
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_view_logout_account"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="@string/logout"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_twotone_power_settings_new_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_view_report_account"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="@string/report"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_twotone_report_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+                <View
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_view_delete_account"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="@string/delete"
+                    android:drawablePadding="32dp"
+                    android:lineSpacingExtra="10dp"
+                    android:fontFamily="@font/google_sans_400"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:drawableStart="@drawable/ic_twotone_delete_24"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>
+

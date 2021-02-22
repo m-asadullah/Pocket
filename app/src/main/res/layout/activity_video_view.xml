@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_video"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F7F7F7"
+            app:popupTheme="@style/AppTheme.AppBarOverlay.Light" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp">
+
+                <TextView
+                    android:id="@+id/text_view_toolbar_title_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_of_video"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/google_sans_400"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:foregroundGravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/text_view_toolbar_subtitle_video"
+                    android:layout_below="@id/text_view_toolbar_title_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="@string/sir_professor_math"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/google_sans_400"
+                    android:foregroundGravity="center_horizontal"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

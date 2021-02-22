@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F7F7F7"
+            app:popupTheme="@style/AppTheme.AppBarOverlay.Light" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="66dp">
+
+                <TextView
+                    android:id="@+id/text_view_toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/google_sans_700"
+                    android:foregroundGravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_below="@id/text_view_toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="@string/verification"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/google_sans_400"
+                    android:foregroundGravity="center_horizontal"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_below="@id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/math_app_will_send_a_one_time_sms_message_to_verify_your_phone_number"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:fontFamily="@font/google_sans_400"
+            android:textColor="@color/colorGreyDark"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"/>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_body_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/please_select_your_country_so_country_code_added_to_phone_automatically"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:fontFamily="@font/google_sans_400"
+                android:textColor="@color/colorGreyDark"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_your_active_phone_number_without_zero_i_e_3001234567"
+                android:layout_gravity="center_horizontal"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:fontFamily="@font/google_sans_400"
+                android:textColor="@color/colorGreyDark"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerCountries"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_text_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number"
+                    android:maxLines="1"
+                    android:digits="0123456789"
+                    android:gravity="center_horizontal"
+                    android:maxLength="10"
+                    android:fontFamily="@font/google_sans_400"
+                    android:inputType="phone"
+                    android:autofillHints=""
+                    android:importantForAutofill="no"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_send_code"
+                android:text="@string/send_code"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="@font/google_sans_700"
+                android:textStyle="normal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_body_parse_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sms_sent_to_your_number_check_it_and_enter_code_here"
+                android:layout_gravity="center_horizontal"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:fontFamily="@font/google_sans_400"
+                android:textColor="@color/colorGreyDark"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/text_view_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:fontFamily="@font/google_sans_700"
+                android:textColor="@color/colorGreyDark"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/text_view_time_lapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_00_00"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:fontFamily="@font/google_sans_700"
+                android:textColor="@color/colorGreyDark"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edit_text_sms_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/verification_code"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:fontFamily="@font/google_sans_400"
+                        android:inputType="numberPassword"
+                        android:autofillHints=""
+                        android:importantForAutofill="no"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:id="@+id/image_view_tick"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_twotone_check_24"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/verification"
+                    android:visibility="gone"
+                    app:tint="@color/Accent" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_verify"
+                android:text="@string/verify"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="@font/google_sans_700"
+                android:textStyle="normal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/button_again"
+                android:text="@string/again"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="@font/google_sans_700"
+                android:textStyle="normal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="2dp"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/text_view_msc_math_app"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_700"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:text="@string/c_o_d_i_x_o_s"
+            android:textSize="8dp"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_msc_math_app"
+            android:fontFamily="@font/montserrat_light"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            tools:ignore="SpUsage" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

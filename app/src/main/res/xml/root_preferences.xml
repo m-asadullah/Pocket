@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Main" >
+
+        <Preference
+            app:key="settings_account"
+            app:title="Account"
+            app:summary="You are not Logged In."
+            app:icon="@drawable/ic_twotone_account_circle_24"/>
+
+        <Preference
+            app:key="settings_notifications"
+            app:title="Notifications"
+            app:summary="Get notified urgently when notification arrived, stay up to date by enabling all notifications."
+            app:icon="@drawable/ic_twotone_notifications_active_24"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreference
+            app:key="sync_data"
+            app:title="Sync data automatically"
+            android:enabled="true"
+            app:enabled="true"
+            app:icon="@drawable/ic_twotone_swap_vertical_circle_24"/>
+
+        <SwitchPreference
+            app:key="download_files"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/download_files_automatically"
+            app:icon="@drawable/ic_twotone_cloud_download_24"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="App">
+
+        <Preference
+            android:key="version_app"
+            app:summary="4.0.53"
+            app:title="App Version"
+            app:icon="@drawable/ic_twotone_layers_24"/>
+
+        <Preference
+            android:key="version_android"
+            app:summary="Android 8.1 Oreo"
+            app:title="Android Version"
+            app:icon="@drawable/ic_baseline_android_24"/>
+
+        <Preference
+            android:key="app_check_update"
+            app:title="Check Update"
+            app:summary="If new version available then it will be automatically notify."
+            app:icon="@drawable/ic_baseline_sync_24"/>
+
+        <Preference
+            android:key="app_clear_cache"
+            app:summary="Clear extra cache data of this app from phone to reduce the load on memory."
+            app:title="Refresh App"
+            app:icon="@drawable/ic_baseline_refresh_24"/>
+
+        <Preference
+            android:key="app_reset"
+            app:summary="Restart may be required after when app was completely reset."
+            app:title="Reset App"
+            app:icon="@drawable/ic_twotone_memory_24"/>
+
+        <Preference
+            android:key="app_share"
+            app:summary="This app share directly as a file via bluetooth or wifi or any other app."
+            app:title="Share"
+            app:icon="@drawable/ic_twotone_share_24"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Support">
+
+        <Preference
+            android:key="app_info"
+            app:title="Info"
+            app:summary="Information &amp; regulatory guidlines"
+            app:icon="@drawable/ic_twotone_help_24"/>
+
+        <Preference
+            android:key="app_help"
+            app:title="Help"
+            app:summary="Frequently Asked Questions (FAQs) about app."
+            app:icon="@drawable/ic_twotone_info_24"/>
+
+        <Preference
+            android:key="app_policy"
+            app:title="Policy"
+            app:summary="Privacy policy is as the google privacy policy about users."
+            app:icon="@drawable/ic_twotone_policy_24"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Projects">
+
+        <Preference
+            android:key="apps_cubixos"
+            app:summary="More apps powered by Codixos."
+            app:title="Apps"
+            app:icon="@drawable/ic_twotone_widgets_24" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Miscellaneous">
+
+        <Preference
+            android:key="app_about"
+            app:summary="Know more about codixos."
+            app:title="About"
+            app:icon="@drawable/ic_twotone_devices_24" />
+
+        <Preference
+            android:key="app_intro"
+            app:summary="Want to get tour about app"
+            app:title="Intro"
+            app:icon="@drawable/ic_twotone_graphic_eq_24" />
+
+        <Preference
+            android:key="app_rating"
+            app:summary="Rate this app according to your view"
+            app:title="Rating"
+            app:icon="@drawable/ic_twotone_star_half_24" />
+
+        <Preference
+            android:key="about_feedback"
+            app:summary="Give your feedback according to your experience."
+            app:title="Feedback"
+            app:icon="@drawable/ic_twotone_feedback_24" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

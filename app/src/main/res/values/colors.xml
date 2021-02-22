@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#2196F3</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="colorWindowsDarkBlue">#03A9F4</color>
+    <color name="colorGrey">#E9E9E9</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreyDark">#888888</color>
+
+    <color name="Accent">#0076e1</color>
+
+    <!-- colors for button style -->
+
+    <!-- colors for tab and screent text -->
+
+    <!--OnBoard-->
+    <color name="ob_desc">#4A4A4A</color>
+
+    <color name="SecondaryDark">#171717</color>
+    <color name="colorGreyLight">#D3D3D3</color>
+    <color name="colorGreyLightest">#F0F1F1F1</color>
+    <!--44af51-->
+    <color name="colorAndroidGreenLight">#3DDC84</color>
+    <color name="colorAndroidGreenDark">#00de7a</color>
+    <color name="colorAndroidDark">#073042</color>
+    <color name="colorAndroidBlue">#4285f4</color>
+
 </resources>

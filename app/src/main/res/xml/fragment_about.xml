@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:key="course_gpc"
+        app:title="Course by College"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_school"
+        app:summary="Course collected by students"/>
+
+    <Preference
+        app:key="course_iub"
+        app:title="Course by University"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_institute_b"
+        app:summary="Provided by The Islamia University, BWP\nMain Campus"/>
+
+    <Preference
+        app:key="contact_email"
+        app:title="For any query mail us at"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_mail"
+        app:summary="cubixos@yahoo.com"/>
+
+    <Preference
+        app:key="app_features"
+        app:title="Other Features"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_baseline_category_24"
+        app:summary="In upcoming versions..."/>
+
+</PreferenceScreen>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/plant_b"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewPagerCountDots" />
+
+    <LinearLayout
+        android:id="@+id/viewPagerCountDots"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_above="@+id/ll_footer"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_get_started"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_gradient_style"
+            android:backgroundTint="@color/colorAndroidGreenDark"
+            android:text="@string/ob_get_started"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAndroidDark"
+            android:visibility="gone"
+            android:fontFamily="@font/google_sans_700"
+            android:layout_gravity="center_horizontal"
+            tools:targetApi="lollipop" />
+
+    </LinearLayout>
+</RelativeLayout>
+
