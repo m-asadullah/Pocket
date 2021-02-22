@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -18,8 +19,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.cubixos.pocket.accessories.dialogs.DialogJoin;
 import com.cubixos.pocket.accessories.misc.AppPermissionManager;
 import com.cubixos.pocket.accessories.misc.CheckInternet;
-import com.cubixos.pocket.adapters.BotanyAdapter;
-import com.cubixos.pocket.models.Botany;
+import com.cubixos.pocket.adapters.PocketAdapter;
+import com.cubixos.pocket.models.Pocket;
 import com.cubixos.pocket.models.User;
 import com.cubixos.pocket.oldpack.AuthActivity;
 import com.cubixos.pocket.settings.SettingsActivity;
@@ -40,12 +41,12 @@ public class MainActivity extends AppCompatActivity {
 
     Activity activity;
     Context context;
-    BotanyAdapter adapterA;
-    BotanyAdapter adapterB;
-    BotanyAdapter adapterC;
-    BotanyAdapter adapterD;
-    BotanyAdapter adapterE;
-    BotanyAdapter adapterF;
+    PocketAdapter adapterA;
+    PocketAdapter adapterB;
+    PocketAdapter adapterC;
+    PocketAdapter adapterD;
+    PocketAdapter adapterE;
+    PocketAdapter adapterF;
     //
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
@@ -170,11 +171,12 @@ public class MainActivity extends AppCompatActivity {
     private void setUpRecyclerViewA() {
         collectionReference = firebaseFirestore.collection("MScBotany");
         Query query = collectionReference.whereEqualTo("studySubject", "SubjectA").orderBy("timeStamp", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Botany> options = new FirestoreRecyclerOptions.Builder<Botany>()
-                .setQuery(query, Botany.class)
+        FirestoreRecyclerOptions<Pocket> options = new FirestoreRecyclerOptions.Builder<Pocket>()
+                .setQuery(query, Pocket.class)
                 .build();
-        adapterA = new BotanyAdapter(options);
-        recyclerViewA.setLayoutManager(new LinearLayoutManager(this));
+        adapterA = new PocketAdapter(options);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL,false);
+        recyclerViewA.setLayoutManager(gridLayoutManager);
         recyclerViewA.setAdapter(adapterA);
         adapterA.notifyDataSetChanged();
     }
@@ -182,58 +184,63 @@ public class MainActivity extends AppCompatActivity {
     private void setUpRecyclerViewB() {
         collectionReference = firebaseFirestore.collection("MScBotany");
         Query query = collectionReference.whereEqualTo("studySubject", "SubjectB").orderBy("timeStamp", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Botany> options = new FirestoreRecyclerOptions.Builder<Botany>()
-                .setQuery(query, Botany.class)
+        FirestoreRecyclerOptions<Pocket> options = new FirestoreRecyclerOptions.Builder<Pocket>()
+                .setQuery(query, Pocket.class)
                 .build();
-        adapterB = new BotanyAdapter(options);
-        recyclerViewB.setLayoutManager(new LinearLayoutManager(this));
+        adapterB = new PocketAdapter(options);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL,false);
+        recyclerViewB.setLayoutManager(gridLayoutManager);
         recyclerViewB.setAdapter(adapterB);
     }
 
     private void setUpRecyclerViewC() {
         collectionReference = firebaseFirestore.collection("MScBotany");
         Query query = collectionReference.whereEqualTo("studySubject", "SubjectC").orderBy("timeStamp", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Botany> options = new FirestoreRecyclerOptions.Builder<Botany>()
-                .setQuery(query, Botany.class)
+        FirestoreRecyclerOptions<Pocket> options = new FirestoreRecyclerOptions.Builder<Pocket>()
+                .setQuery(query, Pocket.class)
                 .build();
-        adapterC = new BotanyAdapter(options);
-        recyclerViewC.setLayoutManager(new LinearLayoutManager(this));
+        adapterC = new PocketAdapter(options);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL,false);
+        recyclerViewC.setLayoutManager(gridLayoutManager);
         recyclerViewC.setAdapter(adapterC);
     }
 
     private void setUpRecyclerViewD() {
         collectionReference = firebaseFirestore.collection("MScBotany");
         Query query = collectionReference.whereEqualTo("studySubject", "SubjectD").orderBy("timeStamp", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Botany> options = new FirestoreRecyclerOptions.Builder<Botany>()
-                .setQuery(query, Botany.class)
+        FirestoreRecyclerOptions<Pocket> options = new FirestoreRecyclerOptions.Builder<Pocket>()
+                .setQuery(query, Pocket.class)
                 .build();
-        adapterD = new BotanyAdapter(options);
+        adapterD = new PocketAdapter(options);
         recyclerViewD = findViewById(R.id.recycler_view_d);
-        recyclerViewD.setLayoutManager(new LinearLayoutManager(this));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL,false);
+        recyclerViewD.setLayoutManager(gridLayoutManager);
         recyclerViewD.setAdapter(adapterD);
     }
 
     private void setUpRecyclerViewE() {
         collectionReference = firebaseFirestore.collection("MScBotany");
         Query query = collectionReference.whereEqualTo("studySubject", "SubjectE").orderBy("timeStamp", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Botany> options = new FirestoreRecyclerOptions.Builder<Botany>()
-                .setQuery(query, Botany.class)
+        FirestoreRecyclerOptions<Pocket> options = new FirestoreRecyclerOptions.Builder<Pocket>()
+                .setQuery(query, Pocket.class)
                 .build();
-        adapterE = new BotanyAdapter(options);
+        adapterE = new PocketAdapter(options);
         recyclerViewE = findViewById(R.id.recycler_view_e);
-        recyclerViewE.setLayoutManager(new LinearLayoutManager(this));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL,false);
+        recyclerViewE.setLayoutManager(gridLayoutManager);
         recyclerViewE.setAdapter(adapterE);
     }
 
     private void setUpRecyclerViewF() {
         collectionReference = firebaseFirestore.collection("MScBotany");
         Query query = collectionReference.whereEqualTo("studySubject", "SubjectF").orderBy("timeStamp", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Botany> options = new FirestoreRecyclerOptions.Builder<Botany>()
-                .setQuery(query, Botany.class)
+        FirestoreRecyclerOptions<Pocket> options = new FirestoreRecyclerOptions.Builder<Pocket>()
+                .setQuery(query, Pocket.class)
                 .build();
-        adapterF = new BotanyAdapter(options);
+        adapterF = new PocketAdapter(options);
         recyclerViewF = findViewById(R.id.recycler_view_f);
-        recyclerViewF.setLayoutManager(new LinearLayoutManager(this));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2, GridLayoutManager.VERTICAL,false);
+        recyclerViewF.setLayoutManager(gridLayoutManager);
         recyclerViewF.setAdapter(adapterF);
     }
 

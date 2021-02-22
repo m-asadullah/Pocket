@@ -19,8 +19,8 @@ import com.cubixos.pocket.accessories.dialogs.DialogJoin;
 import com.cubixos.pocket.accessories.misc.AppPermissionManager;
 import com.cubixos.pocket.accessories.misc.CheckInternet;
 import com.cubixos.pocket.accessories.misc.WebViewStart;
-import com.cubixos.pocket.adapters.BotanyAdapter;
-import com.cubixos.pocket.models.Botany;
+import com.cubixos.pocket.adapters.PocketAdapter;
+import com.cubixos.pocket.models.Pocket;
 import com.cubixos.pocket.models.User;
 import com.cubixos.pocket.oldpack.AuthActivity;
 import com.cubixos.pocket.settings.SettingsActivity;
@@ -45,7 +45,7 @@ public class HistoryActivity extends AppCompatActivity {
     Activity activity;
     Context context;
 
-    private BotanyAdapter adapter;
+    private PocketAdapter adapter;
     //
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
@@ -167,10 +167,10 @@ public class HistoryActivity extends AppCompatActivity {
     private void setUpRecyclerView() {
         collectionReference = firebaseFirestore.collection("MScBotany");
         Query query = collectionReference.orderBy("timeStamp", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Botany> options = new FirestoreRecyclerOptions.Builder<Botany>()
-                .setQuery(query, Botany.class)
+        FirestoreRecyclerOptions<Pocket> options = new FirestoreRecyclerOptions.Builder<Pocket>()
+                .setQuery(query, Pocket.class)
                 .build();
-        adapter = new BotanyAdapter(options);
+        adapter = new PocketAdapter(options);
         RecyclerView recyclerView = findViewById(R.id.recycler_view_main);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

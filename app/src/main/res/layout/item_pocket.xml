@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:id="@+id/constraint_layout_pocket_item"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/rectangle_round_a"
+        android:backgroundTint="@color/colorGreyLightest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp"
+        >
+
+        <com.cubixos.pocket.library.CircleImageView
+            android:id="@+id/image_view_profile_pocket_item"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/empty_profile_pic" />
+
+        <TextView
+            android:id="@+id/text_view_name_pocket_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name"
+            android:textSize="16sp"
+            android:fontFamily="@font/google_sans_500" />
+
+        <TextView
+            android:id="@+id/text_view_designation_pocket_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textSize="12sp"
+            android:fontFamily="@font/google_sans_400" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

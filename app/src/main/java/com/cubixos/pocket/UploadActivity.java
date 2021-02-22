@@ -25,8 +25,8 @@ import com.cubixos.pocket.accessories.misc.CheckInternet;
 import com.cubixos.pocket.accessories.misc.TimeSet;
 import com.cubixos.pocket.accessories.misc.FileMetaData;
 import com.cubixos.pocket.accessories.notifications.NotificationSuccessUpload;
-import com.cubixos.pocket.models.Botany;
-import com.cubixos.pocket.models.SubjectsName;
+import com.cubixos.pocket.models.Pocket;
+import com.cubixos.pocket.models.Category;
 import com.google.android.gms.tasks.OnCanceledListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -42,10 +42,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class UploadActivity extends AppCompatActivity {
 
@@ -120,7 +117,7 @@ public class UploadActivity extends AppCompatActivity {
         }
         //
         spinner = findViewById(R.id.spinner_subjects);
-        spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, SubjectsName.subjectsNameFront));
+        spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, Category.categoryFront));
         //
         textViewSubject = findViewById(R.id.text_view_subject_upload);
         textViewExtension = findViewById(R.id.text_view_extension_file);
@@ -147,7 +144,7 @@ public class UploadActivity extends AppCompatActivity {
         buttonReset = findViewById(R.id.button_reset);
         buttonUpload= findViewById(R.id.button_upload);
         //
-        String stringSubj = SubjectsName.subjectsNameFront[spinner.getSelectedItemPosition()];
+        String stringSubj = Category.categoryFront[spinner.getSelectedItemPosition()];
         textViewSubject.setText(stringSubj);
         //
         imageButtonAttachFile.setOnClickListener(new View.OnClickListener() {
@@ -371,8 +368,8 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     private void uploadData(Uri uriUploadFile) {
-        String subjectnameFront = SubjectsName.subjectsNameFront[spinner.getSelectedItemPosition()];//
-        String subjectname = SubjectsName.subjectsNameBack[spinner.getSelectedItemPosition()];
+        String subjectnameFront = Category.categoryFront[spinner.getSelectedItemPosition()];//
+        String subjectname = Category.categoryBack[spinner.getSelectedItemPosition()];
         String subjectdescription = editTextDescription.getText().toString().trim();
         String subjecttitle = editTextTitle.getText().toString().trim();
         if (subjectname.isEmpty()||(subjectname.equals("NotSelected"))){
@@ -440,7 +437,7 @@ public class UploadActivity extends AppCompatActivity {
                                 stringFileThumbType = null;
                             }
                             //
-                            documentReference.set(new Botany(Long.parseLong(stringTimeStamp), stringTimeDate, "new", subjecttitle, subjectdescription, "", subjectname, "MSc", "2", "fileEditTime", "fileDownloadTime", stringFilename, longFileSize, longFilePgsDur, stringFileExtenstion, stringFileMIMEType, uri.toString(), stringFileThumbType, stringCurrentUserID));
+                            documentReference.set(new Pocket("allow","","","","",""));
                             NotificationSuccessUpload.notificationFileUpload(activity, context, subjecttitle, subjectdescription, stringFilename, FileMetaData.humanReadableByteCountSI(FileMetaData.pickedFileSize(context, uriUploadFile)));
                             if (firebaseUser.getEmail().equals("asadknaam@gmail.com") || firebaseUser.getEmail().equals("cubixos.com@gmail.com")) {
                                 Toast.makeText(context, stringTimeStamp + "\n" + stringTimeDate + "\n" + subjecttitle + "\n" + subjectdescription + "\n" + FileMetaData.humanReadableByteCountSI(FileMetaData.pickedFileSize(context, uriUploadFile)) + "\n" + stringFilename + "\n" + stringFileExtenstion + "\n" + uri.toString(), Toast.LENGTH_LONG).show();
