@@ -14,9 +14,10 @@ android {
         applicationId "com.cubixos.pocket"
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 4021
-        versionName "4.0.21"
+        versionCode 4022
+        versionName "4.0.22"
         multiDexEnabled true
+        ndkVersion "21.4.7075529"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // TO DO: Please update the OneSignal ID below to yours!
@@ -59,7 +60,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:18.0.2'
     implementation 'com.google.firebase:firebase-inappmessaging:19.1.4'
     implementation 'com.google.firebase:firebase-inappmessaging-display:19.1.4'
-    implementation 'org.jetbrains:annotations:16.0.1'
+    implementation 'org.jetbrains:annotations:20.1.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -73,7 +74,7 @@ dependencies {
     implementation 'androidx.media:media:1.2.1'
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
-    implementation 'androidx.window:window:1.0.0-alpha02'
+    implementation 'androidx.window:window:1.0.0-alpha03'
     implementation 'androidx.webkit:webkit:1.4.0'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
@@ -101,10 +102,8 @@ dependencies {
     implementation 'com.microsoft.appcenter:appcenter-crashes:4.1.0'
     // File Picker
     implementation 'com.nbsp:materialfilepicker:1.9.1'
-    // PDF Viewer
-    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
     // OneSignal SDK
-    implementation 'com.onesignal:OneSignal:3.15.4'
+    implementation 'com.onesignal:OneSignal:4.2.0'
     //Image Loading
     implementation 'com.squareup.picasso:picasso:2.71828'
 }
